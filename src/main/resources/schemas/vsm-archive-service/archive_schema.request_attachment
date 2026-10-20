@@ -1,0 +1,47 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "request_attachment",
+        "attributes": {
+            "request_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "content_guid": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "file_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "mime_type": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "created_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "created": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "attachment_type": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "archive_schema.request_attachment"
+    },
+    "priority": [
+        "archive_schema.request",
+        "archive_schema.request_attachment"
+    ],
+    "schemaName": "archive_schema",
+    "dataSourceName": "vsm_sp_test_db"
+}

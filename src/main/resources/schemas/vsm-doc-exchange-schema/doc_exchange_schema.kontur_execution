@@ -1,0 +1,44 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "kontur_execution",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "date": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "docflow_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "type": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "status": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "created": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "updated": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            }
+        },
+        "pathToTable": "doc_exchange_schema.kontur_execution"
+    },
+    "priority": [
+        "doc_exchange_schema.kontur_execution"
+    ],
+    "schemaName": "doc_exchange_schema",
+    "dataSourceName": "vsm_sp_db"
+}

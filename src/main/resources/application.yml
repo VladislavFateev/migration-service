@@ -1,0 +1,78 @@
+server:
+  port: 8085
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+  jpa:
+    show-sql: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5439/postgres?currentSchema=migration_schema
+    username: postgres
+    password: password
+  liquibase:
+    change-log: "classpath:/db/changelog/db.changelog-master.xml"
+
+import:
+  file:
+    path: ../mnt
+export:
+  file:
+    path: Y:\ITFB\Vsm\export
+  entity:
+    limit: 300000
+
+app:
+  datasources:
+    vsm_sp_db:
+      url: jdbc:postgresql://192.168.52.10:5433/vsm_sp_db
+      username: dms_user
+      password: dms_pass
+      driver-class-name: org.postgresql.Driver
+    vsm_sp_test_db:
+      url: jdbc:postgresql://192.168.52.10:5433/vsm_sp_test_db
+      username: dms_user
+      password: dms_pass
+      driver-class-name: org.postgresql.Driver
+    vsm_hp_db:
+      url: jdbc:postgresql://192.168.52.10:5432/vsm_hp_db
+      username: dms_user
+      password: dms_pass
+      driver-class-name: org.postgresql.Driver
+    vsm_hp_test_db:
+      url: jdbc:postgresql://192.168.52.10:5432/vsm_hp_test_db
+      username: dms_user
+      password: dms_pass
+      driver-class-name: org.postgresql.Driver
+#    dms_db:
+#      url: jdbc:postgresql://192.168.30.191:5432/dms_db
+#      username: dms_user
+#      password: dms_pass
+#      driver-class-name: org.postgresql.Driver
+
+#    beeline_dev:
+#      url: jdbc:postgresql://192.168.54.21:5432/beeline_dev
+#      username: dms_user
+#      password: dms_pass
+#      driver-class-name: org.postgresql.Driver
+
+
+#    moek_dms_db:
+#      url: jdbc:postgresql://172.16.30.75:5432/dms_db
+#      username: dms_user
+#      password: dms_pass
+#      driver-class-name: org.postgresql.Driver
+
+    export_test:
+      url: jdbc:postgresql://localhost:5440/postgres
+      username: postgres
+      password: password
+      driver-class-name: org.postgresql.Driver
+    import_test:
+      url: jdbc:postgresql://localhost:5441/postgres
+      username: postgres
+      password: password
+      driver-class-name: org.postgresql.Driver

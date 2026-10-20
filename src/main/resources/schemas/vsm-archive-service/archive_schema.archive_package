@@ -1,0 +1,200 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "archive_package",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "nomenclature_title": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "index": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "archive_guid": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "case_category_code": {
+                "columnLinkName": "code",
+                "dataType": "PARENT_ID",
+                "link": "archive_schema.case_category",
+                "linkType": "OUTER_LINK",
+                "fieldType": "STRING_TYPE"
+            },
+            "department_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "document_kind_code": {
+                "columnLinkName": "code",
+                "dataType": "PARENT_ID",
+                "link": "archive_schema.document_kind",
+                "linkType": "OUTER_LINK",
+                "fieldType": "STRING_TYPE"
+            },
+            "note": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "storage_time": {
+                "dataType": "SIMPLE",
+                "fieldType": "INTEGER_TYPE"
+            },
+            "status": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "storage_start_date": {
+                "dataType": "SIMPLE",
+                "fieldType": "DATE_TYPE"
+            },
+            "storage_nomenclature_date": {
+                "dataType": "SIMPLE",
+                "fieldType": "DATE_TYPE"
+            },
+            "renewal_storage_time": {
+                "dataType": "SIMPLE",
+                "fieldType": "INTEGER_TYPE"
+            },
+            "renewal_date": {
+                "dataType": "SIMPLE",
+                "fieldType": "DATE_TYPE"
+            },
+            "list_article_number": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "storage_time_text": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "storage_type_code": {
+                "columnLinkName": "code",
+                "dataType": "PARENT_ID",
+                "link": "archive_schema.storage_type",
+                "linkType": "OUTER_LINK",
+                "fieldType": "STRING_TYPE"
+            },
+            "archive_date": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "destruction_timestamp": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "nomenclature_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "archive_schema.nomenclature",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "file_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "archive_schema.nomenclature_file_meta",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "created": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "updated": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "created_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "updated_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "registry_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "archive_schema.registry",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "comment": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "start_deadline_date": {
+                "dataType": "SIMPLE",
+                "fieldType": "DATE_TYPE"
+            },
+            "end_deadline_date": {
+                "dataType": "SIMPLE",
+                "fieldType": "DATE_TYPE"
+            },
+            "summary_inventory_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "archive_schema.summary_inventory",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "summary_inventory_number": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "destruction_report_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "archive_schema.destruction_report",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "summary_inventory_sequence_number": {
+                "dataType": "SIMPLE",
+                "fieldType": "INTEGER_TYPE"
+            },
+            "title": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "fixed_list_of_guid": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "reason_storage": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "section_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "archive_schema.sections",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            }
+        },
+        "pathToTable": "archive_schema.archive_package"
+    },
+    "priority": [
+        "archive_schema.summary_inventory",
+        "archive_schema.storage_type",
+        "archive_schema.sections",
+        "archive_schema.registry",
+        "archive_schema.nomenclature_file_meta",
+        "archive_schema.document_kind",
+        "archive_schema.destruction_report",
+        "archive_schema.case_category",
+        "archive_schema.nomenclature",
+        "archive_schema.archive_package"
+    ],
+    "schemaName": "archive_schema",
+    "dataSourceName": "vsm_sp_test_db"
+}

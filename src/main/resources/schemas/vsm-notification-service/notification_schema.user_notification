@@ -1,0 +1,44 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "user_notification",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "login": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "subject": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "content": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "created": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "viewed": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "priority": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "notification_schema.user_notification"
+    },
+    "priority": [
+        "notification_schema.user_notification"
+    ],
+    "schemaName": "notification_schema",
+    "dataSourceName": "vsm_sp_test_db"
+}

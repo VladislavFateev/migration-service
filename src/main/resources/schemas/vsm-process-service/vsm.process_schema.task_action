@@ -1,0 +1,88 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "task_action",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "code": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "title": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "result_title": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "comment_required": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "signature_required": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "task_required": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "wait_next": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "attachment_required": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "approval_chain_required": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "confirm_text": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "main": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "default_comment": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "handlers_value": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "comment_recommended": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "remark_required": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "remark_dictionary_code": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "attachment_recommended": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            }
+        },
+        "pathToTable": "process_schema.task_action"
+    },
+    "priority": [
+        "vsm.process_schema.task_action"
+    ],
+    "schemaName": "process_schema",
+    "dataSourceName": "vsm_hp_db"
+}

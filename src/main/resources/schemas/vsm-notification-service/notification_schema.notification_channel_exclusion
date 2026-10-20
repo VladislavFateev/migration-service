@@ -1,0 +1,28 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "notification_channel_exclusion",
+        "attributes": {
+            "user_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "channel": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "created": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            }
+        },
+        "pathToTable": "notification_schema.notification_channel_exclusion"
+    },
+    "priority": [
+        "notification_schema.notification_channel_exclusion"
+    ],
+    "schemaName": "notification_schema",
+    "dataSourceName": "vsm_sp_test_db"
+}

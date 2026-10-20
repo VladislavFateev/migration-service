@@ -1,0 +1,112 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "lead",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "price": {
+                "dataType": "SIMPLE",
+                "fieldType": "DOUBLE_TYPE"
+            },
+            "client_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "crm_schema.client",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "product_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "crm_schema.product",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "project_type_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "crm_schema.project_type",
+                "linkType": "OUTER_LINK",
+                "fieldType": "INTEGER_TYPE"
+            },
+            "lead_status_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "crm_schema.lead_status",
+                "linkType": "OUTER_LINK",
+                "fieldType": "INTEGER_TYPE"
+            },
+            "lead_type_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "crm_schema.lead_type",
+                "linkType": "OUTER_LINK",
+                "fieldType": "INTEGER_TYPE"
+            },
+            "financial_responsibility_center_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "crm_schema.financial_responsibility_center",
+                "linkType": "OUTER_LINK",
+                "fieldType": "INTEGER_TYPE"
+            },
+            "responsible_manager_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "LONG_TYPE"
+            },
+            "contract_year": {
+                "dataType": "SIMPLE",
+                "fieldType": "INTEGER_TYPE"
+            },
+            "close_at": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "presale_at": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "deleted": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "create_at": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "update_at": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "create_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "update_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "crm_schema.lead"
+    },
+    "priority": [
+        "crm_schema.project_type",
+        "crm_schema.product",
+        "crm_schema.lead_type",
+        "crm_schema.lead_status",
+        "crm_schema.financial_responsibility_center",
+        "crm_schema.client",
+        "crm_schema.lead"
+    ],
+    "schemaName": "crm_schema",
+    "dataSourceName": "vsm_sp_db"
+}

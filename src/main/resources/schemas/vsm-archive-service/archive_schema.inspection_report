@@ -1,0 +1,64 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "inspection_report",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "errors": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "document_guid": {
+                "columnLinkName": "guid",
+                "dataType": "PARENT_ID",
+                "link": "archive_schema.document_info",
+                "linkType": "OUTER_LINK",
+                "fieldType": "STRING_TYPE"
+            },
+            "inspection_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "archive_schema.inspection",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "created": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "updated": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "created_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "updated_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "started": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "ended": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            }
+        },
+        "pathToTable": "archive_schema.inspection_report"
+    },
+    "priority": [
+        "archive_schema.inspection",
+        "archive_schema.document_info",
+        "archive_schema.inspection_report"
+    ],
+    "schemaName": "archive_schema",
+    "dataSourceName": "vsm_sp_test_db"
+}

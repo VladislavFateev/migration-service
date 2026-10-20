@@ -1,0 +1,61 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "historical_user_info",
+        "sequence": "historical_user_id_seq",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "entity_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "entity_type": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "login": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "full_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "department_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "department": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "position": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "position_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "organization": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "organization_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "documents_schema.historical_user_info"
+    },
+    "priority": [
+        "documents_schema.historical_user_info"
+    ],
+    "schemaName": "documents_schema",
+    "dataSourceName": "vsm_hp_db"
+}

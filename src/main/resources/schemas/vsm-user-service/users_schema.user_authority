@@ -1,0 +1,31 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "user_authority",
+        "attributes": {
+            "user_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "authority": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "columnLinkName": "code",
+                "dataType": "PARENT_ID",
+                "link": "users_schema.authority",
+                "linkType": "OUTER_LINK",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "users_schema.user_authority"
+    },
+    "priority": [
+        "users_schema.authority",
+        "users_schema.app_user",
+        "users_schema.user_authority"
+    ],
+    "schemaName": "users_schema",
+    "dataSourceName": "vsm_sp_db"
+}

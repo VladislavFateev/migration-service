@@ -1,0 +1,44 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "kontur_attachment",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "docflow_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "document_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "created": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "updated": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "content_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "file_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "doc_exchange_schema.kontur_attachment"
+    },
+    "priority": [
+        "doc_exchange_schema.kontur_attachment"
+    ],
+    "schemaName": "doc_exchange_schema",
+    "dataSourceName": "vsm_sp_db"
+}

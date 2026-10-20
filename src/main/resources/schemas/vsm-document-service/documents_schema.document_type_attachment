@@ -1,0 +1,43 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "document_type_attachment",
+        "attributes": {
+            "attachment_type_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "document_type_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "documents_schema.document_type",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "required": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "active": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "signature_required": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            }
+        },
+        "pathToTable": "documents_schema.document_type_attachment"
+    },
+    "priority": [
+        "documents_schema.document_type",
+        "documents_schema.attachment_type",
+        "documents_schema.document_type_attachment"
+    ],
+    "schemaName": "documents_schema",
+    "dataSourceName": "vsm_hp_db"
+}

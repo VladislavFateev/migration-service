@@ -1,0 +1,67 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "document_attachment",
+        "attributes": {
+            "content_info_guid": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "document_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "LONG_TYPE"
+            },
+            "document_version_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "LONG_TYPE"
+            },
+            "deleted": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "created": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "created_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "updated": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "updated_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "attachment_type_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "documents_schema.attachment_type",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "comment": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "signature_required": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            }
+        },
+        "pathToTable": "documents_schema.document_attachment"
+    },
+    "priority": [
+        "documents_schema.binary_content_info",
+        "documents_schema.attachment_type",
+        "documents_schema.document_version",
+        "documents_schema.document",
+        "documents_schema.document_attachment"
+    ],
+    "schemaName": "documents_schema",
+    "dataSourceName": "vsm_hp_db"
+}

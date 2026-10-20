@@ -1,0 +1,94 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "qrtz_triggers",
+        "attributes": {
+            "sched_name": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "columnLinkName": "sched_name",
+                "dataType": "ID",
+                "link": "documents_schema.qrtz_job_details",
+                "linkType": "OUTER_LINK",
+                "fieldType": "STRING_TYPE"
+            },
+            "trigger_name": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "trigger_group": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "job_name": {
+                "columnLinkName": "job_name",
+                "dataType": "PARENT_ID",
+                "link": "documents_schema.qrtz_job_details",
+                "linkType": "OUTER_LINK",
+                "fieldType": "STRING_TYPE"
+            },
+            "job_group": {
+                "columnLinkName": "job_group",
+                "dataType": "PARENT_ID",
+                "link": "documents_schema.qrtz_job_details",
+                "linkType": "OUTER_LINK",
+                "fieldType": "STRING_TYPE"
+            },
+            "description": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "next_fire_time": {
+                "dataType": "SIMPLE",
+                "fieldType": "LONG_TYPE"
+            },
+            "prev_fire_time": {
+                "dataType": "SIMPLE",
+                "fieldType": "LONG_TYPE"
+            },
+            "priority": {
+                "dataType": "SIMPLE",
+                "fieldType": "INTEGER_TYPE"
+            },
+            "trigger_state": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "trigger_type": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "start_time": {
+                "dataType": "SIMPLE",
+                "fieldType": "LONG_TYPE"
+            },
+            "end_time": {
+                "dataType": "SIMPLE",
+                "fieldType": "LONG_TYPE"
+            },
+            "calendar_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "misfire_instr": {
+                "dataType": "SIMPLE",
+                "fieldType": "SHORT_TYPE"
+            },
+            "job_data": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "documents_schema.qrtz_triggers"
+    },
+    "priority": [
+        "documents_schema.qrtz_job_details",
+        "documents_schema.qrtz_triggers"
+    ],
+    "schemaName": "documents_schema",
+    "dataSourceName": "vsm_hp_db"
+}

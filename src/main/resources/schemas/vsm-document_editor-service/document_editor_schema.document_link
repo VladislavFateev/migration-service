@@ -1,0 +1,24 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "document_link",
+        "attributes": {
+            "document_guid": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "attachment_guid": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "document_editor_schema.document_link"
+    },
+    "priority": [
+        "document_editor_schema.document_link"
+    ],
+    "schemaName": "document_editor_schema",
+    "dataSourceName": "vsm_sp_db"
+}

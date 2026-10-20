@@ -1,0 +1,42 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "task_report",
+        "attributes": {
+            "user_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "task_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "task_schema.task",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "report_data": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "report_document_guid": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "report_date": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            }
+        },
+        "pathToTable": "task_schema.task_report"
+    },
+    "priority": [
+        "vsm.task_schema.task",
+        "vsm.task_schema.task_report"
+    ],
+    "schemaName": "task_schema",
+    "dataSourceName": "vsm_sp_db"
+}

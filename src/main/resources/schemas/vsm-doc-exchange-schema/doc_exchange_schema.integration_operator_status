@@ -1,0 +1,32 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "integration_operator_status",
+        "attributes": {
+            "operator": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "status": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "created": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "updated": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            }
+        },
+        "pathToTable": "doc_exchange_schema.integration_operator_status"
+    },
+    "priority": [
+        "doc_exchange_schema.integration_operator_status"
+    ],
+    "schemaName": "doc_exchange_schema",
+    "dataSourceName": "vsm_sp_db"
+}

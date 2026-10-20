@@ -1,0 +1,42 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "task_attachment",
+        "attributes": {
+            "task_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "task_schema.task",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "content_guid": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "created": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "file_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "created_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "task_schema.task_attachment"
+    },
+    "priority": [
+        "vsm.task_schema.task",
+        "vsm.task_schema.task_attachment"
+    ],
+    "schemaName": "task_schema",
+    "dataSourceName": "vsm_sp_db"
+}

@@ -1,0 +1,50 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "section_settings",
+        "sequence": "section_settings_id_seq",
+        "attributes": {
+            "login": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "section": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "columns": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "filter": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "users_schema.section_settings"
+    },
+    "priority": [
+        "users_schema.app_role",
+        "users_schema.position",
+        "users_schema.organization",
+        "users_schema.department",
+        "users_schema.app_user",
+        "users_schema.app_user_role",
+        "users_schema.authority",
+        "users_schema.deputy_person",
+        "users_schema.functional_organizational_unit",
+        "users_schema.password_reset_token",
+        "users_schema.role_authority",
+        "users_schema.role_groups",
+        "users_schema.source_system",
+        "users_schema.technical_user",
+        "users_schema.user_authority",
+        "users_schema.section_settings"
+    ],
+    "schemaName": "users_schema",
+    "dataSourceName": "postgres"
+}

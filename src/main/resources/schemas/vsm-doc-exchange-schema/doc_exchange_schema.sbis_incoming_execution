@@ -1,0 +1,28 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "sbis_incoming_execution",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "date": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "event_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "doc_exchange_schema.sbis_incoming_execution"
+    },
+    "priority": [
+        "doc_exchange_schema.sbis_incoming_execution"
+    ],
+    "schemaName": "doc_exchange_schema",
+    "dataSourceName": "vsm_sp_db"
+}

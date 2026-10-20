@@ -1,0 +1,44 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "notification_message_log",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "code": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "emails": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "send_time": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "successful": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "logins": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "error": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "notification_schema.notification_message_log"
+    },
+    "priority": [
+        "notification_schema.notification_message_log"
+    ],
+    "schemaName": "notification_schema",
+    "dataSourceName": "vsm_sp_test_db"
+}

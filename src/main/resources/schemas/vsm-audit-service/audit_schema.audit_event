@@ -1,0 +1,76 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "audit_event",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "user_login": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "created": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "successful": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "additional_info": {
+                "dataType": "SIMPLE",
+                "fieldType": "JSONB_TYPE"
+            },
+            "service_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "operation_code": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "operation_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "entity_class": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "entity_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "entity_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "client_ip": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "owning_entity_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "error_message": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "error_info": {
+                "dataType": "SIMPLE",
+                "fieldType": "JSONB_TYPE"
+            }
+        },
+        "pathToTable": "audit_schema.audit_event"
+    },
+    "priority": [
+        "audit_schema.audit_event"
+    ],
+    "schemaName": "audit_schema",
+    "dataSourceName": "vsm_sp_db"
+}

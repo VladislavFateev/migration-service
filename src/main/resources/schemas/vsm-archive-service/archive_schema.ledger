@@ -1,0 +1,124 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "ledger",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "agreement_date": {
+                "dataType": "SIMPLE",
+                "fieldType": "DATE_TYPE"
+            },
+            "org_dep_title": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "registry_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "archive_schema.registry",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "summary_inventory_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "archive_schema.summary_inventory",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "destruction_report_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "archive_schema.destruction_report",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "fund_number": {
+                "columnLinkName": "number",
+                "dataType": "PARENT_ID",
+                "link": "archive_schema.fund",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "summary_inventory_permanent_storage_archive_packages": {
+                "dataType": "SIMPLE",
+                "fieldType": "INTEGER_TYPE"
+            },
+            "summary_inventory_above_storage_archive_packages": {
+                "dataType": "SIMPLE",
+                "fieldType": "INTEGER_TYPE"
+            },
+            "summary_inventory_personal_storage_archive_packages": {
+                "dataType": "SIMPLE",
+                "fieldType": "INTEGER_TYPE"
+            },
+            "report_permanent_storage_archive_packages": {
+                "dataType": "SIMPLE",
+                "fieldType": "INTEGER_TYPE"
+            },
+            "report_above_storage_archive_packages": {
+                "dataType": "SIMPLE",
+                "fieldType": "INTEGER_TYPE"
+            },
+            "report_personal_storage_archive_packages": {
+                "dataType": "SIMPLE",
+                "fieldType": "INTEGER_TYPE"
+            },
+            "note": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "storage_types": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "archive_packages_total": {
+                "dataType": "SIMPLE",
+                "fieldType": "LONG_TYPE"
+            },
+            "archive_packages_summary_inventory": {
+                "dataType": "SIMPLE",
+                "fieldType": "LONG_TYPE"
+            },
+            "type": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "year": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "created": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "updated": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "created_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "updated_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "archive_schema.ledger"
+    },
+    "priority": [
+        "archive_schema.summary_inventory",
+        "archive_schema.registry",
+        "archive_schema.destruction_report",
+        "archive_schema.fund",
+        "archive_schema.ledger"
+    ],
+    "schemaName": "archive_schema",
+    "dataSourceName": "vsm_sp_test_db"
+}

@@ -1,0 +1,80 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "deputy_person",
+        "sequence": "deputy_person_id_seq",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "user_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "users_schema.app_user",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "deputy_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "users_schema.app_user",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "deputy_start_date": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "deputy_end_date": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "created": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "author": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "updated": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "updated_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "conditions": {
+                "dataType": "SIMPLE",
+                "fieldType": "JSONB_TYPE"
+            },
+            "full_delegation": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "comment": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "cancel_date": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "active": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            }
+        },
+        "pathToTable": "users_schema.deputy_person"
+    },
+    "priority": [
+        "users_schema.app_user",
+        "users_schema.deputy_person"
+    ],
+    "schemaName": "users_schema",
+    "dataSourceName": "vsm_sp_db"
+}

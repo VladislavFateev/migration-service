@@ -1,0 +1,32 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "organization_info",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "full_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "short_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "parent_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "archive_schema.organization_info"
+    },
+    "priority": [
+        "archive_schema.organization_info"
+    ],
+    "schemaName": "archive_schema",
+    "dataSourceName": "vsm_sp_test_db"
+}

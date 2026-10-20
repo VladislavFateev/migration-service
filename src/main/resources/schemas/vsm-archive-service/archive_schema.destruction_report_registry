@@ -1,0 +1,26 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "destruction_report_registry",
+        "attributes": {
+            "destruction_report_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "registry_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "LONG_TYPE"
+            }
+        },
+        "pathToTable": "archive_schema.destruction_report_registry"
+    },
+    "priority": [
+        "archive_schema.registry",
+        "archive_schema.destruction_report",
+        "archive_schema.destruction_report_registry"
+    ],
+    "schemaName": "archive_schema",
+    "dataSourceName": "vsm_sp_test_db"
+}

@@ -1,0 +1,38 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "document_type_attribute",
+        "attributes": {
+            "document_type_id": {
+                "columnLinkName": "id",
+                "dataType": "ID",
+                "link": "documents_schema.document_type",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "attr_definition_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "documents_schema.attribute_definition",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "versioned": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "active": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            }
+        },
+        "pathToTable": "documents_schema.document_type_attribute"
+    },
+    "priority": [
+        "documents_schema.document_type",
+        "documents_schema.attribute_definition",
+        "documents_schema.document_type_attribute"
+    ],
+    "schemaName": "documents_schema",
+    "dataSourceName": "vsm_hp_db"
+}

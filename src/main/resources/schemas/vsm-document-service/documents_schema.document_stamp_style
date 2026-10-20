@@ -1,0 +1,49 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "document_stamp_style",
+        "sequence": "document_stamp_style_id_seq",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "color": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "all_pages": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "document_type_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "documents_schema.document_type",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "position_order": {
+                "dataType": "SIMPLE",
+                "fieldType": "INTEGER_TYPE"
+            },
+            "title": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "need_separator": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            }
+        },
+        "pathToTable": "documents_schema.document_stamp_style"
+    },
+    "priority": [
+        "documents_schema.document_type",
+        "documents_schema.document_stamp_style"
+    ],
+    "schemaName": "documents_schema",
+    "dataSourceName": "vsm_hp_db"
+}

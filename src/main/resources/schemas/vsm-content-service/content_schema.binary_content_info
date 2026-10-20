@@ -1,0 +1,52 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "binary_content_info",
+        "attributes": {
+            "guid": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "file_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "mime_type": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "storage_type": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "size": {
+                "dataType": "SIMPLE",
+                "fieldType": "LONG_TYPE"
+            },
+            "path": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "created": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "created_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "checksum": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "content_schema.binary_content_info"
+    },
+    "priority": [
+        "content_schema.binary_content_info"
+    ],
+    "schemaName": "content_schema",
+    "dataSourceName": "vsm_sp_db"
+}

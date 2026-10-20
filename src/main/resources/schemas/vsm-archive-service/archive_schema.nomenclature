@@ -1,0 +1,80 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "nomenclature",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "title": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "year": {
+                "columnLinkName": "year",
+                "dataType": "PARENT_ID",
+                "link": "archive_schema.archive_year",
+                "linkType": "OUTER_LINK",
+                "fieldType": "INTEGER_TYPE"
+            },
+            "fund_number": {
+                "columnLinkName": "number",
+                "dataType": "PARENT_ID",
+                "link": "archive_schema.fund",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "order_number": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "order_date": {
+                "dataType": "SIMPLE",
+                "fieldType": "DATE_TYPE"
+            },
+            "protocol_number": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "protocol_date": {
+                "dataType": "SIMPLE",
+                "fieldType": "DATE_TYPE"
+            },
+            "comment": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "status": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "created": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "updated": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "created_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "updated_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "archive_schema.nomenclature"
+    },
+    "priority": [
+        "archive_schema.fund",
+        "archive_schema.archive_year",
+        "archive_schema.nomenclature"
+    ],
+    "schemaName": "archive_schema",
+    "dataSourceName": "vsm_sp_test_db"
+}

@@ -1,0 +1,97 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "project_access",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "project_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "project_schema.project",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "access_type": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "user_login": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "department_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "role_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "partner_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "INTEGER_TYPE"
+            },
+            "organization_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "create_at": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "update_at": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "create_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "update_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "holder_title": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "project_schema.project_access"
+    },
+    "priority": [
+        "project_schema.stage_reference",
+        "project_schema.stage_reference_document_section",
+        "project_schema.stage_reference_section_document_type",
+        "project_schema.attribute",
+        "project_schema.program",
+        "project_schema.expert_opinion",
+        "project_schema.partner",
+        "project_schema.project_template",
+        "project_schema.attribute_project_template_section",
+        "project_schema.project_version",
+        "project_schema.project",
+        "project_schema.project_program",
+        "project_schema.project_document_link",
+        "project_schema.project_curator",
+        "project_schema.project_stage_version",
+        "project_schema.project_stage",
+        "project_schema.project_task_version",
+        "project_schema.project_task",
+        "project_schema.project_stage_access",
+        "project_schema.project_document_section",
+        "project_schema.project_document_section_document_type",
+        "project_schema.project_document_section_document",
+        "project_schema.project_comment",
+        "project_schema.project_stage_access",
+        "project_schema.attribute_project_section",
+        "project_schema.project_attribute",
+        "project_schema.project_access"
+    ],
+    "schemaName": "project_schema",
+    "dataSourceName": "vsm_sp_db"
+}

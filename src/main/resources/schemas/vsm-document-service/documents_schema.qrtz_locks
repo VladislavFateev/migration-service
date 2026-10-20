@@ -1,0 +1,26 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "qrtz_locks",
+        "attributes": {
+            "sched_name": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "lock_name": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "documents_schema.qrtz_locks"
+    },
+    "priority": [
+        "documents_schema.qrtz_locks"
+    ],
+    "schemaName": "documents_schema",
+    "dataSourceName": "vsm_hp_db"
+}

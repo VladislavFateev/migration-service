@@ -1,0 +1,31 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "app_user_role",
+        "attributes": {
+            "user_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "role_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "users_schema.app_role",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            }
+        },
+        "pathToTable": "users_schema.app_user_role"
+    },
+    "priority": [
+        "users_schema.app_user",
+        "users_schema.app_role",
+        "users_schema.app_user_role"
+    ],
+    "schemaName": "users_schema",
+    "dataSourceName": "vsm_sp_db"
+}

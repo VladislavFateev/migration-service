@@ -1,0 +1,26 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "qrtz_paused_trigger_grps",
+        "attributes": {
+            "sched_name": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "trigger_group": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "documents_schema.qrtz_paused_trigger_grps"
+    },
+    "priority": [
+        "documents_schema.qrtz_paused_trigger_grps"
+    ],
+    "schemaName": "documents_schema",
+    "dataSourceName": "vsm_hp_db"
+}

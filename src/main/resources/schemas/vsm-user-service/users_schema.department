@@ -1,0 +1,86 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "department",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "full_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "department_index": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "parent_id": {
+                "linkType": "OUTER_LINK",
+                "fieldType": "STRING_TYPE",
+                "link": "users_schema.department",
+                "columnLinkName": "id"
+            },
+            "path": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "created": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "updated": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "created_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "updated_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "active": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "date_from": {
+                "dataType": "SIMPLE",
+                "fieldType": "DATE_TYPE"
+            },
+            "date_to": {
+                "dataType": "SIMPLE",
+                "fieldType": "DATE_TYPE"
+            },
+            "organization_id": {
+                "dataType": "PARENT_ID",
+                "linkType": "OUTER_LINK",
+                "fieldType": "STRING_TYPE",
+                "link": "users_schema.organization",
+                "columnLinkName": "id"
+            },
+            "head_position_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "short_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "legal_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "users_schema.department"
+    },
+    "priority": [
+        "users_schema.organization",
+        "users_schema.department"
+    ],
+    "schemaName": "users_schema",
+    "dataSourceName": "postgres"
+}

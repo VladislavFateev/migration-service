@@ -1,0 +1,60 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "reg_sequence",
+        "attributes": {
+            "code": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "title": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "sequence_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "start_value": {
+                "dataType": "SIMPLE",
+                "fieldType": "SHORT_TYPE"
+            },
+            "restart_day": {
+                "dataType": "SIMPLE",
+                "fieldType": "SHORT_TYPE"
+            },
+            "restart_month": {
+                "dataType": "SIMPLE",
+                "fieldType": "SHORT_TYPE"
+            },
+            "created_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "updated_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "created": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "updated": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "active": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            }
+        },
+        "pathToTable": "documents_schema.reg_sequence"
+    },
+    "priority": [
+        "documents_schema.reg_sequence"
+    ],
+    "schemaName": "documents_schema",
+    "dataSourceName": "vsm_hp_db"
+}

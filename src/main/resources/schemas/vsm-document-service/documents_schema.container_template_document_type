@@ -1,0 +1,26 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "container_template_document_type",
+        "attributes": {
+            "container_template_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "document_type_id": {
+                "linkType": "SIMPLE",
+                "fieldType": "LONG_TYPE"
+            }
+        },
+        "pathToTable": "documents_schema.container_template_document_type"
+    },
+    "priority": [
+        "documents_schema.document_type",
+        "documents_schema.container_template",
+        "documents_schema.container_template_document_type"
+    ],
+    "schemaName": "documents_schema",
+    "dataSourceName": "vsm_hp_db"
+}

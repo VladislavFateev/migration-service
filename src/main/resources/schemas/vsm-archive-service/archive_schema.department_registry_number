@@ -1,0 +1,28 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "department_registry_number",
+        "attributes": {
+            "department_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "registry_kind_code": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "number": {
+                "dataType": "SIMPLE",
+                "fieldType": "LONG_TYPE"
+            }
+        },
+        "pathToTable": "archive_schema.department_registry_number"
+    },
+    "priority": [
+        "archive_schema.department_registry_number"
+    ],
+    "schemaName": "archive_schema",
+    "dataSourceName": "vsm_sp_test_db"
+}

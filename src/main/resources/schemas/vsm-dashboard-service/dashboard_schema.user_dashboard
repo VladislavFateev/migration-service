@@ -1,0 +1,42 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "user_dashboard",
+        "attributes": {
+            "user_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "dashboard_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "dashboard_schema.dashboard",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "main": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "order_index": {
+                "dataType": "SIMPLE",
+                "fieldType": "SHORT_TYPE"
+            },
+            "selected": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            }
+        },
+        "pathToTable": "dashboard_schema.user_dashboard"
+    },
+    "priority": [
+        "dashboard_schema.dashboard",
+        "dashboard_schema.user_dashboard"
+    ],
+    "schemaName": "dashboard_schema",
+    "dataSourceName": "vsm_sp_db"
+}

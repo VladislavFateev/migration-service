@@ -1,0 +1,22 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "role_groups",
+        "attributes": {
+            "role_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "LONG_TYPE"
+            },
+            "groups": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "users_schema.role_groups"
+    },
+    "priority": [
+        "users_schema.role_groups"
+    ],
+    "dataSourceName": "vsm_sp_db",
+    "schemaName": "users_schema"
+}

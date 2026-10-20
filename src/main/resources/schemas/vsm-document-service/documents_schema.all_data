@@ -1,0 +1,98 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "document_access",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "document_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "documents_schema.document",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "created": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "created_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "access_type": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "user_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "department_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "role_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "due_date": {
+                "dataType": "SIMPLE",
+                "fieldType": "DATE_TYPE"
+            }
+        },
+        "pathToTable": "documents_schema.document_access"
+    },
+    "priority": [
+
+        "documents_schema.binary_content_info",
+        "documents_schema.user_info",
+        "documents_schema.reg_sequence",
+        "documents_schema.reg_sequence_value",
+        "documents_schema.attachment_type",
+        "documents_schema.document_filter",
+        "documents_schema.document_lock",
+        "documents_schema.document_template",
+        "documents_schema.entity_form",
+
+        "documents_schema.document_type",
+        "documents_schema.document_type_access",
+        "documents_schema.document_type_print_form",
+        "documents_schema.document_type_attachment",
+        "documents_schema.document_status",
+        "documents_schema.document_form",
+        "documents_schema.document_version",
+        "documents_schema.document",
+
+        "documents_schema.document_attachment",
+        "documents_schema.favorite_document",
+        "documents_schema.attribute_definition",
+        "documents_schema.document_type_attribute",
+
+        "documents_schema.document_stamp_style",
+        "documents_schema.relation_type",
+        "documents_schema.document_type_relation",
+        "documents_schema.document_relation",
+
+        "documents_schema.document_comment",
+
+        "documents_schema.container_template",
+        "documents_schema.container_template_attribute",
+        "documents_schema.container",
+        "documents_schema.container_access",
+        "documents_schema.document_container_link",
+
+        "documents_schema.document_access"
+    ],
+    "schemaName": "documents_schema",
+    "dataSourceName": "vsm_hp_db"
+}
+

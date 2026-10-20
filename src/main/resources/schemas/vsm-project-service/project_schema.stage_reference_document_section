@@ -1,0 +1,73 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "stage_reference_document_section",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "parent_id": {
+                "dataType": "PARENT_ID",
+                "linkType": "SELF_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "stage_reference_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "project_schema.stage_reference",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "section_type": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "order_index": {
+                "dataType": "SIMPLE",
+                "fieldType": "INTEGER_TYPE"
+            },
+            "create_at": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "update_at": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "create_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "update_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "short_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "guid": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "code": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "project_schema.stage_reference_document_section"
+    },
+    "priority": [
+        "project_schema.stage_reference",
+        "project_schema.stage_reference_document_section"
+    ],
+    "schemaName": "project_schema",
+    "dataSourceName": "vsm_sp_db"
+}

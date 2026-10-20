@@ -1,0 +1,42 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "responsible_person",
+        "attributes": {
+            "user_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "task_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "task_schema.task",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "control_date": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "primary_": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "full_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "task_schema.responsible_person"
+    },
+    "priority": [
+        "vsm.task_schema.task",
+        "vsm.task_schema.responsible_person"
+    ],
+    "schemaName": "task_schema",
+    "dataSourceName": "vsm_sp_db"
+}

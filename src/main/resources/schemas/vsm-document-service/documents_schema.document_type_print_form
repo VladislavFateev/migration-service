@@ -1,0 +1,32 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "document_type_print_form",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "document_type_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "documents_schema.document_type",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "print_form_template_code": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "documents_schema.document_type_print_form"
+    },
+    "priority": [
+        "documents_schema.document_type",
+        "documents_schema.document_type_print_form"
+    ],
+    "schemaName": "documents_schema",
+    "dataSourceName": "vsm_sp_db"
+}

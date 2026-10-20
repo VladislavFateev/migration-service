@@ -1,0 +1,52 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "document_form",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "document_type_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "project_schema.document_type",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "status": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "created": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "created_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "updated": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "updated_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "pattern": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "project_schema.document_form"
+    },
+    "priority": [
+        "project_schema.document_type",
+        "project_schema.document_form"
+    ],
+    "schemaName": "project_schema",
+    "dataSourceName": "vsm_sp_db"
+}

@@ -1,0 +1,80 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "print_form_template",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "code": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "create_at": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "update_at": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "title": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "tag": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "version": {
+                "dataType": "SIMPLE",
+                "fieldType": "INTEGER_TYPE"
+            },
+            "binary_content_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "print_form_schema.binary_content",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "file_name_pattern": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "type": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "active": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "create_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "update_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "print_form_template_version_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "print_form_schema.print_form_template_version",
+                "linkType": "DOUBLE_LINK",
+                "fieldType": "LONG_TYPE"
+            }
+        },
+        "pathToTable": "print_form_schema.print_form_template"
+    },
+    "priority": [
+        "print_form_schema.binary_content",
+        "print_form_schema.print_form_template_version",
+        "print_form_schema.print_form_template"
+    ],
+    "schemaName": "print_form_schema",
+    "dataSourceName": "postgres"
+}

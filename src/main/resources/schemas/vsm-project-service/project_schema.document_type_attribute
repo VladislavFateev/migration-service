@@ -1,0 +1,35 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "document_type_attribute",
+        "attributes": {
+            "document_type_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "columnLinkName": "id",
+                "dataType": "ID",
+                "link": "project_schema.document_type",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "attr_definition_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "project_schema.document_type",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "versioned": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            }
+        },
+        "pathToTable": "project_schema.document_type_attribute"
+    },
+    "priority": [
+        "project_schema.document_type",
+        "project_schema.document_type_attribute"
+    ],
+    "schemaName": "project_schema",
+    "dataSourceName": "vsm_sp_db"
+}

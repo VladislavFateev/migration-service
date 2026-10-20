@@ -1,0 +1,28 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "document_kind",
+        "attributes": {
+            "code": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "title": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "created": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            }
+        },
+        "pathToTable": "archive_schema.document_kind"
+    },
+    "priority": [
+        "archive_schema.document_kind"
+    ],
+    "schemaName": "archive_schema",
+    "dataSourceName": "vsm_sp_test_db"
+}

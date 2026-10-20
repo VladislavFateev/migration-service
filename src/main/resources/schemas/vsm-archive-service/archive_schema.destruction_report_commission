@@ -1,0 +1,53 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "destruction_report_commission",
+        "attributes": {
+            "member": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "destruction_report_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "archive_schema.destruction_report",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "created": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "updated": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "created_by": {
+                "columnLinkName": "login",
+                "dataType": "PARENT_ID",
+                "link": "archive_schema.user_info",
+                "linkType": "OUTER_LINK",
+                "fieldType": "STRING_TYPE"
+            },
+            "updated_by": {
+                "columnLinkName": "login",
+                "dataType": "PARENT_ID",
+                "link": "archive_schema.user_info",
+                "linkType": "OUTER_LINK",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "archive_schema.destruction_report_commission"
+    },
+    "priority": [
+        "archive_schema.user_info",
+        "archive_schema.destruction_report",
+        "archive_schema.destruction_report_commission"
+    ],
+    "schemaName": "archive_schema",
+    "dataSourceName": "vsm_sp_test_db"
+}

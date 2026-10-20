@@ -1,0 +1,27 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "destruction_report_summary_inventory",
+        "attributes": {
+            "destruction_report_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "columnLinkName": "id",
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "summary_inventory_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "LONG_TYPE"
+            }
+        },
+        "pathToTable": "archive_schema.destruction_report_summary_inventory"
+    },
+    "priority": [
+        "archive_schema.summary_inventory",
+        "archive_schema.destruction_report",
+        "archive_schema.destruction_report_summary_inventory"
+    ],
+    "schemaName": "archive_schema",
+    "dataSourceName": "vsm_sp_test_db"
+}

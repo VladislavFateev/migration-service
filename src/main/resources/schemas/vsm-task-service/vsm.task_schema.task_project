@@ -1,0 +1,56 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "task_project",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "due_date": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "guid": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "base_document_guid": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "parent_task_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "task_schema.task",
+                "linkType": "DOUBLE_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "created_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "created": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "approval_required": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "owner": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "task_schema.task_project"
+    },
+    "priority": [
+        "vsm.task_schema.task",
+        "vsm.task_schema.task_project"
+    ],
+    "schemaName": "task_schema",
+    "dataSourceName": "vsm_sp_db"
+}

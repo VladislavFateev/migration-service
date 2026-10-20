@@ -1,0 +1,86 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "qrtz_simprop_triggers",
+        "attributes": {
+            "sched_name": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "columnLinkName": "sched_name",
+                "dataType": "ID",
+                "link": "documents_schema.qrtz_triggers",
+                "linkType": "OUTER_LINK",
+                "fieldType": "STRING_TYPE"
+            },
+            "trigger_name": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "columnLinkName": "trigger_name",
+                "dataType": "PARENT_ID",
+                "link": "documents_schema.qrtz_triggers",
+                "linkType": "OUTER_LINK",
+                "fieldType": "STRING_TYPE"
+            },
+            "trigger_group": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "columnLinkName": "trigger_group",
+                "dataType": "PARENT_ID",
+                "link": "documents_schema.qrtz_triggers",
+                "linkType": "OUTER_LINK",
+                "fieldType": "STRING_TYPE"
+            },
+            "str_prop_1": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "str_prop_2": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "str_prop_3": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "int_prop_1": {
+                "dataType": "SIMPLE",
+                "fieldType": "INTEGER_TYPE"
+            },
+            "int_prop_2": {
+                "dataType": "SIMPLE",
+                "fieldType": "INTEGER_TYPE"
+            },
+            "long_prop_1": {
+                "dataType": "SIMPLE",
+                "fieldType": "LONG_TYPE"
+            },
+            "long_prop_2": {
+                "dataType": "SIMPLE",
+                "fieldType": "LONG_TYPE"
+            },
+            "dec_prop_1": {
+                "dataType": "SIMPLE",
+                "fieldType": "DOUBLE_TYPE"
+            },
+            "dec_prop_2": {
+                "dataType": "SIMPLE",
+                "fieldType": "DOUBLE_TYPE"
+            },
+            "bool_prop_1": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "bool_prop_2": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            }
+        },
+        "pathToTable": "documents_schema.qrtz_simprop_triggers"
+    },
+    "priority": [
+        "documents_schema.qrtz_triggers",
+        "documents_schema.qrtz_simprop_triggers"
+    ],
+    "schemaName": "documents_schema",
+    "dataSourceName": "vsm_hp_db"
+}

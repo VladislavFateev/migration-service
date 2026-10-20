@@ -1,0 +1,27 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "favorite_document",
+        "attributes": {
+            "document_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "user_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "documents_schema.favorite_document"
+    },
+    "priority": [
+        "documents_schema.document",
+        "documents_schema.favorite_document"
+    ],
+    "schemaName": "documents_schema",
+    "dataSourceName": "vsm_hp_db"
+}

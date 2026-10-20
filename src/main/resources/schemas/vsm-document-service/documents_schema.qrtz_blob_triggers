@@ -1,0 +1,46 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "qrtz_blob_triggers",
+        "attributes": {
+            "sched_name": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "columnLinkName": "sched_name",
+                "dataType": "ID",
+                "link": "documents_schema.qrtz_triggers",
+                "linkType": "OUTER_LINK",
+                "fieldType": "STRING_TYPE"
+            },
+            "trigger_name": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "columnLinkName": "trigger_name",
+                "dataType": "PARENT_ID",
+                "link": "documents_schema.qrtz_triggers",
+                "linkType": "OUTER_LINK",
+                "fieldType": "STRING_TYPE"
+            },
+            "trigger_group": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "columnLinkName": "trigger_group",
+                "dataType": "PARENT_ID",
+                "link": "documents_schema.qrtz_triggers",
+                "linkType": "OUTER_LINK",
+                "fieldType": "STRING_TYPE"
+            },
+            "blob_data": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "documents_schema.qrtz_blob_triggers"
+    },
+    "priority": [
+        "documents_schema.qrtz_triggers",
+        "documents_schema.qrtz_blob_triggers"
+    ],
+    "schemaName": "documents_schema",
+    "dataSourceName": "vsm_hp_db"
+}

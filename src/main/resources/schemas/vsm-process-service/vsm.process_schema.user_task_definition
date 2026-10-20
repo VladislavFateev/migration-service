@@ -1,0 +1,40 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "user_task_definition",
+        "attributes": {
+            "task_def_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "task_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "process_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "process_key": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "form_key": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "active": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            }
+        },
+        "pathToTable": "process_schema.user_task_definition"
+    },
+    "priority": [
+        "vsm.process_schema.user_task_definition"
+    ],
+    "schemaName": "process_schema",
+    "dataSourceName": "vsm_hp_db"
+}

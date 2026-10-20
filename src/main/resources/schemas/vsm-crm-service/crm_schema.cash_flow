@@ -1,0 +1,102 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "cash_flow",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "lead_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "crm_schema.lead",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "year": {
+                "dataType": "SIMPLE",
+                "fieldType": "INTEGER_TYPE"
+            },
+            "q1_profit_without_nds": {
+                "dataType": "SIMPLE",
+                "fieldType": "DOUBLE_TYPE"
+            },
+            "q1_profit_probability": {
+                "dataType": "SIMPLE",
+                "fieldType": "DOUBLE_TYPE"
+            },
+            "q2_profit_without_nds": {
+                "dataType": "SIMPLE",
+                "fieldType": "DOUBLE_TYPE"
+            },
+            "q2_profit_probability": {
+                "dataType": "SIMPLE",
+                "fieldType": "DOUBLE_TYPE"
+            },
+            "q3_profit_without_nds": {
+                "dataType": "SIMPLE",
+                "fieldType": "DOUBLE_TYPE"
+            },
+            "q3_profit_probability": {
+                "dataType": "SIMPLE",
+                "fieldType": "DOUBLE_TYPE"
+            },
+            "q4_profit_without_nds": {
+                "dataType": "SIMPLE",
+                "fieldType": "DOUBLE_TYPE"
+            },
+            "q4_profit_probability": {
+                "dataType": "SIMPLE",
+                "fieldType": "DOUBLE_TYPE"
+            },
+            "profit_without_nds": {
+                "dataType": "SIMPLE",
+                "fieldType": "DOUBLE_TYPE"
+            },
+            "profit_probability": {
+                "dataType": "SIMPLE",
+                "fieldType": "DOUBLE_TYPE"
+            },
+            "next_year_profit_without_nds": {
+                "dataType": "SIMPLE",
+                "fieldType": "DOUBLE_TYPE"
+            },
+            "next_year_profit_probability": {
+                "dataType": "SIMPLE",
+                "fieldType": "DOUBLE_TYPE"
+            },
+            "create_at": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "update_at": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "create_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "update_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "crm_schema.cash_flow"
+    },
+    "priority": [
+        "crm_schema.project_type",
+        "crm_schema.product",
+        "crm_schema.lead_type",
+        "crm_schema.lead_status",
+        "crm_schema.financial_responsibility_center",
+        "crm_schema.client",
+        "crm_schema.lead",
+        "crm_schema.cash_flow"
+    ],
+    "schemaName": "crm_schema",
+    "dataSourceName": "vsm_sp_db"
+}

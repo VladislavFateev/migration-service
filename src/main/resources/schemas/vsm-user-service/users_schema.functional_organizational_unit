@@ -1,0 +1,92 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "functional_organizational_unit",
+        "sequence": "functional_organizational_unit_id_seq",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "parent_id": {
+                "columnLinkName": "id",
+                "link": "users_schema.functional_organizational_unit",
+                "dataType": "PARENT_ID",
+                "linkType": "SELF_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "path": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "title": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "code": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "department_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "users_schema.department",
+                "linkType": "OUTER_LINK",
+                "fieldType": "STRING_TYPE"
+            },
+            "position_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "user_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "users_schema.app_user",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "child_organization": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "active": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "created": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "created_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "updated": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "updated_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "starting_date": {
+                "dataType": "SIMPLE",
+                "fieldType": "DATE_TYPE"
+            },
+            "ending_date": {
+                "dataType": "SIMPLE",
+                "fieldType": "DATE_TYPE"
+            }
+        },
+        "pathToTable": "users_schema.functional_organizational_unit"
+    },
+    "priority": [
+        "users_schema.department",
+        "users_schema.app_user",
+        "users_schema.functional_organizational_unit"
+    ],
+    "schemaName": "users_schema",
+    "dataSourceName": "vsm_sp_db"
+}

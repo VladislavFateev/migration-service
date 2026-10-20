@@ -1,0 +1,79 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "user_info",
+        "attributes": {
+            "login": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "full_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "email": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "position": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "department": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "department_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "position_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "organization": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "organization_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "documents_schema.user_info"
+    },
+    "priority": [
+        "documents_schema.binary_content_info",
+        "documents_schema.attachment_type",
+        "documents_schema.document_filter",
+        "documents_schema.document_lock",
+        "documents_schema.document_template",
+        "documents_schema.entity_form",
+        "documents_schema.document_type",
+        "documents_schema.document_type_access",
+        "documents_schema.document_type_print_form",
+        "documents_schema.document_type_attachment",
+        "documents_schema.document_status",
+        "documents_schema.document_form",
+        "documents_schema.attribute_definition",
+        "documents_schema.document_type_attribute",
+        "documents_schema.document_stamp_style",
+        "documents_schema.relation_type",
+        "documents_schema.document_type_relation",
+        "documents_schema.container_template",
+        "documents_schema.container_template_attribute",
+        "documents_schema.container",
+        "documents_schema.container_access",
+        "documents_schema.user_info"
+    ],
+    "schemaName": "documents_schema",
+    "dataSourceName": "vsm_hp_db"
+}
+
+
+
+
+
+

@@ -1,0 +1,68 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "nomenclature_file_meta",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "nomenclature_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "archive_schema.nomenclature",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "filename": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "errors": {
+                "dataType": "SIMPLE",
+                "fieldType": "JSONB_TYPE"
+            },
+            "status": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "content_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "archive_schema.nomenclature_file_content",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "created": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "updated": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "created_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "updated_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "comment": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "archive_schema.nomenclature_file_meta"
+    },
+    "priority": [
+        "archive_schema.nomenclature_file_content",
+        "archive_schema.nomenclature",
+        "archive_schema.nomenclature_file_meta"
+    ],
+    "schemaName": "archive_schema",
+    "dataSourceName": "vsm_sp_test_db"
+}

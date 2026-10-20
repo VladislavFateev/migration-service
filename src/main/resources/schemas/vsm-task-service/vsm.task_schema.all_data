@@ -1,0 +1,43 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "task_access",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "task_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "task_schema.task",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "user_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "deputy_of": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "task_schema.task_access"
+    },
+    "priority": [
+        "vsm.task_schema.task_project",
+        "vsm.task_schema.task",
+        "vsm.task_schema.related_document",
+        "vsm.task_schema.responsible_person",
+        "vsm.task_schema.task_attachment",
+        "vsm.task_schema.task_comment",
+        "vsm.task_schema.task_report",
+        "vsm.task_schema.user_info",
+        "vsm.task_schema.task_access"
+    ],
+    "schemaName": "task_schema",
+    "dataSourceName": "vsm_sp_db"
+}

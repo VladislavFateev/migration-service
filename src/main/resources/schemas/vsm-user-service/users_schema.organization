@@ -1,0 +1,71 @@
+{
+    "exportEntity": {
+        "unique": false,
+        "name": "organization",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "GUID",
+                "fieldType": "STRING_TYPE"
+            },
+            "short_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "full_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "parent_id": {
+                "columnLinkName": "id",
+                "link": "users_schema.organization",
+                "dataType": "PARENT_ID",
+                "linkType": "SELF_LINK",
+                "fieldType": "STRING_TYPE"
+            },
+            "inn": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "kpp": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "created_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "created": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "updated": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "legal_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "deleted": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "active": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "city": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "users_schema.organization"
+    },
+    "priority": [
+        "users_schema.organization"
+    ],
+    "schemaName": "users_schema",
+    "dataSourceName": "vsm_sp_db"
+}

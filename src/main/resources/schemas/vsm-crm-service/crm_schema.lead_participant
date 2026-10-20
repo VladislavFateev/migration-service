@@ -1,0 +1,62 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "lead_participant",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "user_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "LONG_TYPE"
+            },
+            "lead_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "crm_schema.lead",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "kind": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "deleted": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "create_at": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "update_at": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "create_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "update_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "crm_schema.lead_participant"
+    },
+    "priority": [
+        "crm_schema.project_type",
+        "crm_schema.product",
+        "crm_schema.lead_type",
+        "crm_schema.lead_status",
+        "crm_schema.financial_responsibility_center",
+        "crm_schema.client",
+        "crm_schema.lead",
+        "crm_schema.lead_participant"
+    ],
+    "schemaName": "crm_schema",
+    "dataSourceName": "vsm_sp_db"
+}

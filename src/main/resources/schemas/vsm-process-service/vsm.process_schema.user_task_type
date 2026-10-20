@@ -1,0 +1,24 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "user_task_type",
+        "attributes": {
+            "task_def_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "title": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "process_schema.user_task_type"
+    },
+    "priority": [
+        "vsm.process_schema.user_task_type"
+    ],
+    "schemaName": "process_schema",
+    "dataSourceName": "vsm_hp_db"
+}

@@ -1,0 +1,50 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "attachment",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "attachment_guid": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "operator_attachment_guid": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "exchange_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "doc_exchange_schema.exchange",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "file_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "document_guid": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "doc_exchange_schema.attachment"
+    },
+    "priority": [
+        "doc_exchange_schema.counterparty",
+        "doc_exchange_schema.attachment_type_mapping",
+        "doc_exchange_schema.kontur_attachment",
+        "doc_exchange_schema.kontur_task",
+        "doc_exchange_schema.sbis_incoming_execution",
+        "doc_exchange_schema.exchange",
+        "doc_exchange_schema.operator_attachment",
+        "doc_exchange_schema.attachment"
+    ],
+    "schemaName": "doc_exchange_schema",
+    "dataSourceName": "vsm_sp_db"
+}

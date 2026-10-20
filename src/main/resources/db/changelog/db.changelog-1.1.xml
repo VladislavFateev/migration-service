@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="create-migration-service" author="v.fateev">
+        <createTable tableName="migration_task">
+            <column name="guid" type="varchar">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="created_by" type="varchar">
+            </column>
+            <column name="start_created_time" type="timestamp">
+            </column>
+            <column name="created_time" type="timestamp">
+            </column>
+            <column name="status" type="varchar">
+            </column>
+            <column name="task_type" type="varchar">
+                <constraints nullable="false"/>
+            </column>
+            <column name="schema_name" type="varchar">
+            </column>
+
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

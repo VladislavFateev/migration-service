@@ -1,0 +1,28 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "user_viewed_task",
+        "attributes": {
+            "task_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "user_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "viewed_at": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            }
+        },
+        "pathToTable": "process_schema.user_viewed_task"
+    },
+    "priority": [
+        "vsm.process_schema.user_viewed_task"
+    ],
+    "schemaName": "process_schema",
+    "dataSourceName": "vsm_hp_db"
+}

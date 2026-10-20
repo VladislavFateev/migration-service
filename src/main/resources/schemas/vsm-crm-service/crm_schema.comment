@@ -1,0 +1,63 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "comment",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "lead_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "crm_schema.lead",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "task_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "crm_schema.task",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "comment_text": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "create_at": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "update_at": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "create_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "update_by": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "crm_schema.comment"
+    },
+    "priority": [
+        "crm_schema.contact",
+        "crm_schema.project_type",
+        "crm_schema.product",
+        "crm_schema.lead_type",
+        "crm_schema.lead_status",
+        "crm_schema.financial_responsibility_center",
+        "crm_schema.client",
+        "crm_schema.lead",
+        "crm_schema.task",
+        "crm_schema.comment"
+    ],
+    "schemaName": "crm_schema",
+    "dataSourceName": "vsm_sp_db"
+}

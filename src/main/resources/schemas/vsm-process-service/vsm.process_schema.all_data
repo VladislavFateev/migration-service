@@ -1,0 +1,58 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "user_info",
+        "attributes": {
+            "login": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "full_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "email": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "position": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "department": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "department_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "position_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "organization": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "organization_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "process_schema.user_info"
+    },
+    "priority": [
+        "vsm.process_schema.task_action",
+        "vsm.process_schema.task_attachment",
+        "vsm.process_schema.user_task_definition",
+        "vsm.process_schema.user_task_type",
+        "vsm.process_schema.user_viewed_task",
+        "vsm.process_schema.work_time",
+        "vsm.process_schema.user_info"
+    ],
+    "schemaName": "process_schema",
+    "dataSourceName": "vsm_hp_db"
+}

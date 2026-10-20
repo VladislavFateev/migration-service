@@ -1,0 +1,28 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "dashboard_access",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "accesses": {
+                "dataType": "SIMPLE",
+                "fieldType": "JSONB_TYPE"
+            }
+        },
+        "pathToTable": "dashboard_schema.dashboard_access"
+    },
+    "priority": [
+        "dashboard_schema.dashboard",
+        "dashboard_schema.widget",
+        "dashboard_schema.dashboard_widget",
+        "dashboard_schema.user_dashboard",
+        "dashboard_schema.dashboard_access"
+    ],
+    "schemaName": "dashboard_schema",
+    "dataSourceName": "vsm_sp_db"
+}

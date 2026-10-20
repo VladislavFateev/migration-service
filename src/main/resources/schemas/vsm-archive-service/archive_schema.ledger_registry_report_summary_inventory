@@ -1,0 +1,26 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "ledger_registry_report_summary_inventory",
+        "attributes": {
+            "ledger_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "summary_inventory_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "LONG_TYPE"
+            }
+        },
+        "pathToTable": "archive_schema.ledger_registry_report_summary_inventory"
+    },
+    "priority": [
+        "archive_schema.summary_inventory",
+        "archive_schema.ledger",
+        "archive_schema.ledger_registry_report_summary_inventory"
+    ],
+    "schemaName": "archive_schema",
+    "dataSourceName": "vsm_sp_test_db"
+}

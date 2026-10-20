@@ -1,0 +1,54 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "qrtz_simple_triggers",
+        "attributes": {
+            "sched_name": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "columnLinkName": "sched_name",
+                "dataType": "ID",
+                "link": "documents_schema.qrtz_triggers",
+                "linkType": "OUTER_LINK",
+                "fieldType": "STRING_TYPE"
+            },
+            "trigger_name": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "columnLinkName": "trigger_name",
+                "dataType": "PARENT_ID",
+                "link": "documents_schema.qrtz_triggers",
+                "linkType": "OUTER_LINK",
+                "fieldType": "STRING_TYPE"
+            },
+            "trigger_group": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "columnLinkName": "trigger_group",
+                "dataType": "PARENT_ID",
+                "link": "documents_schema.qrtz_triggers",
+                "linkType": "OUTER_LINK",
+                "fieldType": "STRING_TYPE"
+            },
+            "repeat_count": {
+                "dataType": "SIMPLE",
+                "fieldType": "LONG_TYPE"
+            },
+            "repeat_interval": {
+                "dataType": "SIMPLE",
+                "fieldType": "LONG_TYPE"
+            },
+            "times_triggered": {
+                "dataType": "SIMPLE",
+                "fieldType": "LONG_TYPE"
+            }
+        },
+        "pathToTable": "documents_schema.qrtz_simple_triggers"
+    },
+    "priority": [
+        "documents_schema.qrtz_triggers",
+        "documents_schema.qrtz_simple_triggers"
+    ],
+    "schemaName": "documents_schema",
+    "dataSourceName": "vsm_hp_db"
+}

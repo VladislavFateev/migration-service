@@ -1,0 +1,26 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "dashboard_widget",
+        "attributes": {
+            "dashboard_id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "widget_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "LONG_TYPE"
+            }
+        },
+        "pathToTable": "dashboard_schema.dashboard_widget"
+    },
+    "priority": [
+        "dashboard_schema.widget",
+        "dashboard_schema.dashboard",
+        "dashboard_schema.dashboard_widget"
+    ],
+    "schemaName": "dashboard_schema",
+    "dataSourceName": "vsm_sp_db"
+}

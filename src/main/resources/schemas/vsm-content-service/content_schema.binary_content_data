@@ -1,0 +1,24 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "binary_content_data",
+        "attributes": {
+            "guid": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "data": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "content_schema.binary_content_data"
+    },
+    "priority": [
+        "content_schema.binary_content_data"
+    ],
+    "schemaName": "content_schema",
+    "dataSourceName": "vsm_sp_db"
+}

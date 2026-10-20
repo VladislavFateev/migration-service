@@ -1,0 +1,22 @@
+image: nexus.itfbgroup.ru:5000/maven:3.9.8-eclipse-temurin-21-alpine
+variables:
+  MAVEN_CLI_OPTS: "-s ci_settings.xml -Dmaven.repo.local=.m2/repository"
+  ADDITIONAL_INF: " Branch: $CI_COMMIT_BRANCH. Employee: $GITLAB_USER_NAME"
+
+stages:
+  - maven-build
+  - maven-deploy
+
+maven-build:
+  stage: maven-build
+  cache:
+    key: maven-cache
+    paths:
+      - .m2/repository
+  script:
+    - 'mvn $MAVEN_CLI_OPTS clean compile'
+
+maven-deploy:
+  stage: maven-deploy
+  script:
+    - 'mvn $MAVEN_CLI_OPTS clean deploy -Dmaven.users_schema.role_authority.skip=true'

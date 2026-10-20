@@ -1,0 +1,134 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "app_user",
+        "sequence": "user_id_seq",
+        "attributes": {
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "INTEGER_TYPE"
+            },
+            "login": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "email": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "active": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "first_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "last_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "middle_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "full_name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "fired_date": {
+                "dataType": "SIMPLE",
+                "fieldType": "DATE_TYPE"
+            },
+            "employment_date": {
+                "dataType": "SIMPLE",
+                "fieldType": "DATE_TYPE"
+            },
+            "is_account_disabled_from_sync": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "department_id": {
+                "dataType": "PARENT_ID",
+                "linkType": "OUTER_LINK",
+                "fieldType": "STRING_TYPE",
+                "link": "users_schema.department",
+                "columnLinkName": "id"
+            },
+            "is_internal_user": {
+                "dataType": "SIMPLE",
+                "fieldType": "BOOLEAN_TYPE"
+            },
+            "password": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "work_phone_number": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "internal_phone_number": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "mobile_phone_number": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "profile_picture": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "position_id": {
+                "dataType": "PARENT_ID",
+                "linkType": "OUTER_LINK",
+                "fieldType": "STRING_TYPE",
+                "link": "users_schema.position",
+                "columnLinkName": "id"
+            },
+            "domain": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "external_id": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "personnel_number": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+             "organization_id": {
+                "dataType": "PARENT_ID",
+                "linkType": "OUTER_LINK",
+                "fieldType": "STRING_TYPE",
+                "link": "users_schema.organization",
+                "columnLinkName": "id"
+            },
+            "access_reason": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "created": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            },
+            "updated": {
+                "dataType": "SIMPLE",
+                "fieldType": "TIMESTAMP_TYPE"
+            }
+        },
+        "pathToTable": "users_schema.app_user"
+    },
+    "priority": [
+        "users_schema.app_role",
+        "users_schema.position",
+        "users_schema.organization",
+        "users_schema.department",
+        "users_schema.app_user"
+    ],
+    "schemaName": "users_schema",
+    "dataSourceName": "postgres"
+}

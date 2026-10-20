@@ -1,0 +1,31 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                          http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <servers>
+        <server>
+            <id>nexus.itfbgroup.ru</id>
+            <username>${env.NEXUS_USER}</username>
+            <password>${env.NEXUS_PASSWORD}</password>
+        </server>
+        <server>
+            <id>nexus.itfbgroup.ru.m2.releases</id>
+            <username>${env.NEXUS_USER}</username>
+            <password>${env.NEXUS_PASSWORD}</password>
+        </server>
+        <server>
+            <id>nexus.itfbgroup.ru.m2.snapshots</id>
+            <username>${env.NEXUS_USER}</username>
+            <password>${env.NEXUS_PASSWORD}</password>
+        </server>
+    </servers>
+
+    <mirrors>
+        <mirror>
+            <!--This sends everything else to /public -->
+            <id>nexus.itfbgroup.ru</id>
+            <mirrorOf>*,!jitpack.io,!nexus.corp.dev.vtb</mirrorOf>
+            <url>https://nexus.itfbgroup.ru/repository/maven-public/</url>
+        </mirror>
+    </mirrors>
+</settings>

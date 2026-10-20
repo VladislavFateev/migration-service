@@ -1,0 +1,35 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "section_settings",
+        "sequence": "section_settings_id_seq",
+        "attributes": {
+            "login": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "section": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "columns": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            },
+            "filter": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "users_schema.section_settings"
+    },
+    "priority": [
+        "users_schema.section_settings"
+    ],
+    "schemaName": "users_schema",
+    "dataSourceName": "postgres"
+}

@@ -1,0 +1,45 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "project_template_stage_reference",
+        "attributes": {
+            "project_template_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "project_schema.project_template",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "stage_reference_id": {
+                "columnLinkName": "id",
+                "dataType": "PARENT_ID",
+                "link": "project_schema.stage_reference",
+                "linkType": "OUTER_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "id": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "LONG_TYPE"
+            },
+            "previous_template_stage_reference_id": {
+                "dataType": "PARENT_ID",
+                "linkType": "SELF_LINK",
+                "fieldType": "LONG_TYPE"
+            },
+            "relation_type": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "project_schema.project_template_stage_reference"
+    },
+    "priority": [
+        "project_schema.stage_reference",
+        "project_schema.project_template",
+        "project_schema.project_template_stage_reference"
+    ],
+    "schemaName": "project_schema",
+    "dataSourceName": "vsm_sp_db"
+}

@@ -1,0 +1,321 @@
+{
+	"info": {
+		"_postman_id": "e98c832a-41f0-496d-8078-10e2aa57e52d",
+		"name": "migration-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27184323",
+		"_collection_link": "https://interstellar-sunset-250371.postman.co/workspace/Team-Workspace~133ff5e8-192f-4e0f-87a1-66a62a750189/collection/27184323-e98c832a-41f0-496d-8078-10e2aa57e52d?action=share&source=collection_link&creator=27184323"
+	},
+	"item": [
+		{
+			"name": "user-service",
+			"item": [
+				{
+					"name": "user-service/GET create export file (app_user table)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8085/public/export/migration-task/e7af02cf-e586-4404-9cda-978da2c7335a"
+					},
+					"response": []
+				},
+				{
+					"name": "user-service/GET create export file (app_role table)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8085/public/export/users_schema.app_role"
+					},
+					"response": []
+				},
+				{
+					"name": "user-service/GET create export file (authority table)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8085/public/export/users_schema.authority"
+					},
+					"response": []
+				},
+				{
+					"name": "user-service/GET create export file (department table)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8085/public/export/users_schema.department"
+					},
+					"response": []
+				},
+				{
+					"name": "user-service/GET create export file (organization table)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8085/public/export/users_schema.organization"
+					},
+					"response": []
+				},
+				{
+					"name": "user-service/GET create export file (position table)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8082/api/public/export/app_user-schema"
+					},
+					"response": []
+				},
+				{
+					"name": "test",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8085/public/export/users_schema.role_authority"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "project-service",
+			"item": [
+				{
+					"name": "project-service/GET create export file",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8085/public/export/migration-task/b3a41beb-beaa-43c4-8523-578d599bbebb"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "import-entity-holder-by-schema",
+			"item": [
+				{
+					"name": "import data",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "multipartFile",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							]
+						},
+						"url": "http://localhost:8085/public/import/59f243b7-4f46-42d9-a648-837e7bc01616"
+					},
+					"response": []
+				},
+				{
+					"name": "create-schema-by-resources",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "multipartFile",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							]
+						},
+						"url": "http://localhost:8085/public/schema/init"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "generate-schema",
+			"item": [
+				{
+					"name": "create-schema",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "multipartFile",
+									"type": "file",
+									"src": "/C:/Users/vladm/Desktop/export-document-service/app_user"
+								}
+							]
+						},
+						"url": "http://localhost:8085/public/generate/schema/create/vsm_sp_db/project_schema/project_template_attribute"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "migration-task",
+			"item": [
+				{
+					"name": "create-export-task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"columnName\": [],\r\n    // \"values\": [],\r\n    // \"operator\": [],\r\n    // \"logicalOperator\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8085/public/task/export/vsm_sp_db/documents_schema.all_data_test_document_type"
+					},
+					"response": []
+				},
+				{
+					"name": "create-import-task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "multipartFile",
+									"type": "file",
+									"src": "/Y:/ITFB/Vsm/export/af6668c8-32d2-458c-a184-58bd4b83e91d.zip"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8085/public/task/import_test?isCollisionCreateNewEntity=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"public",
+								"task",
+								"import_test"
+							],
+							"query": [
+								{
+									"key": "isCollisionCreateNewEntity",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

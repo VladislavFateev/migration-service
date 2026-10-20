@@ -1,0 +1,24 @@
+{
+    "exportEntity": {
+        "unique": true,
+        "name": "audit_operation_type",
+        "attributes": {
+            "code": {
+                "isGenerateOnDbSide": false,
+                "isPk": true,
+                "dataType": "ID",
+                "fieldType": "STRING_TYPE"
+            },
+            "name": {
+                "dataType": "SIMPLE",
+                "fieldType": "STRING_TYPE"
+            }
+        },
+        "pathToTable": "audit_schema.audit_operation_type"
+    },
+    "priority": [
+        "audit_schema.audit_operation_type"
+    ],
+    "schemaName": "audit_schema",
+    "dataSourceName": "vsm_sp_db"
+}
